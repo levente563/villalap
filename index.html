@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="hu"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Villamos alapismeretek – összefoglaló és gyakorlóteszt</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f5f7f4;--fg:#14232b;--mut:#5a6b72;--card:#fff;--line:#d3dcd8;--acc:#0b6b5c;--hi:#e4f06a;--ok:#1d7a3e;--okb:#dff3e5;--bad:#b3261e;--badb:#fbe3e1}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10181c;--fg:#e6eeea;--mut:#9fb0b0;--card:#18242a;--line:#2c3c42;--acc:#5fd1ba;--hi:#4b5a10;--ok:#7fdc9c;--okb:#173b25;--bad:#ff9a92;--badb:#42201d}}
+:root[data-theme="dark"]{--bg:#10181c;--fg:#e6eeea;--mut:#9fb0b0;--card:#18242a;--line:#2c3c42;--acc:#5fd1ba;--hi:#4b5a10;--ok:#7fdc9c;--okb:#173b25;--bad:#ff9a92;--badb:#42201d}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 "Source Serif 4",Georgia,"Times New Roman",serif}
+main{max-width:860px;margin:0 auto;padding:20px 16px 60px}
+h1{font:700 1.9rem/1.2 "Source Sans 3","Segoe UI",system-ui,sans-serif;margin:8px 0 4px}
+h2,h3,button,.tab{font-family:"Source Sans 3","Segoe UI",system-ui,sans-serif}
+.sub{color:var(--mut);margin:0 0 16px}
+nav{display:flex;gap:8px;margin:12px 0 18px;border-bottom:2px solid var(--line)}
+.tab{background:none;border:0;padding:10px 16px;font-size:1rem;font-weight:600;color:var(--mut);cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px}
+.tab[aria-selected="true"]{color:var(--acc);border-color:var(--acc)}
+section.pane[hidden]{display:none}
+details{background:var(--card);border:1px solid var(--line);border-radius:6px;margin:10px 0;padding:0 14px}
+summary{cursor:pointer;font:600 1.1rem "Source Sans 3","Segoe UI",system-ui,sans-serif;padding:12px 0}
+details[open] summary{border-bottom:1px solid var(--line);margin-bottom:8px}
+details ul{padding-left:20px;margin:6px 0 12px}
+li{margin:4px 0}
+.f{font-family:"Cambria Math","STIX Two Math",Georgia,serif;background:var(--hi);padding:0 5px;border-radius:3px;white-space:nowrap}
+table{border-collapse:collapse;width:100%;font-size:.93rem;margin:8px 0 12px;display:block;overflow-x:auto}
+td,th{border:1px solid var(--line);padding:5px 9px;text-align:left}
+.tip{border-left:4px solid var(--acc);padding:6px 12px;margin:10px 0;background:var(--card)}
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
+button.p,select{font:600 .95rem "Source Sans 3",system-ui,sans-serif;padding:9px 16px;border-radius:6px;border:1px solid var(--acc);background:var(--acc);color:var(--bg);cursor:pointer}
+select{background:var(--card);color:var(--fg)}
+button:focus-visible,summary:focus-visible,select:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+#score{margin-left:auto;font:700 1.05rem "Source Sans 3",system-ui,sans-serif}
+.q{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px;margin:12px 0}
+.q p{margin:0 0 10px;font-weight:600}
+.o{display:block;width:100%;text-align:left;font:inherit;padding:8px 12px;margin:6px 0;border:1px solid var(--line);border-radius:5px;background:var(--bg);color:var(--fg);cursor:pointer}
+.o:hover:not(:disabled){border-color:var(--acc)}
+.o.ok{background:var(--okb);border-color:var(--ok);color:var(--ok)}
+.o.no{background:var(--badb);border-color:var(--bad);color:var(--bad)}
+.ex{font-size:.9rem;color:var(--mut);margin-top:6px}
+</style></head><body><main>
+<h1>Villamos alapismeretek</h1>
+<p class="sub">Összefoglaló az előadásokból (01–06) és gyakorlóteszt a zh0 mintája alapján.</p>
+<nav role="tablist"><button class="tab" role="tab" id="t1" aria-selected="true">Összefoglaló</button><button class="tab" role="tab" id="t2" aria-selected="false">Dinamikus teszt</button></nav>
+
+<section class="pane" id="p1">
+<details open><summary>Alapmennyiségek, áram, teljesítmény</summary><ul>
+<li>Áram: <span class="f">I = Q/t</span>, mértékegysége A = C/s. A pozitív töltések a térerősség irányába mozognak, a negatívak ellenkezőleg. Megállapodás szerint az áram a + pólustól a − felé folyik.</li>
+<li>Egyenáram (DC): állandó irány. Váltakozó áram (AC): az irány az időben változik, 50 Hz-nél másodpercenként 50 pozitív és 50 negatív félperiódus.</li>
+<li>Feszültség: <span class="f">U = W/Q</span>. Kondenzátor: <span class="f">C = Q/U</span>, síkkondenzátorban <span class="f">E = U/d</span> (a távolsággal fordítottan arányos).</li>
+<li>Teljesítmény: <span class="f">P = U·I = W/t</span> [W = J/s]. Ellenálláson: <span class="f">P = U²/R</span>, vagyis a feszültséggel négyzetesen nő. Hatásfok: <span class="f">η = P_fogyasztó / P_leadott</span> (az előadás szerint).</li>
+<li>Az akkumulátorba töltött energia veszteségek miatt csak részben nyerhető vissza.</li>
+</ul></details>
+
+<details><summary>A tárgy, töltés, Coulomb, kondenzátor, vezetők (01. előadás)</summary><ul>
+<li>Tárgy: 2/0/1/V, félév végén vizsga. Gyakorlat: három 4 órás laborméréshez 15 perces szintfelmérő. Zárthelyi: 1 × 60 perc, teszt, legalább elégséges (Go/NoGo), nem számít az év végi jegybe.</li>
+<li>Töltés: jele Q, mértékegysége C. <span class="f">1 C = 1 A·s</span>. Elemi töltés <span class="f">e ≈ 1,602·10⁻¹⁹ C</span> (proton +, elektron −).</li>
+<li>Coulomb-törvény: <span class="f">F = (1/4πε)·Q₁Q₂/r²</span>, <span class="f">ε = ε₀·εᵣ</span>, <span class="f">ε₀ = 8,854·10⁻¹² C²/(N·m²)</span>. Az erő a töltések szorzatával egyenesen, a távolság négyzetével fordítottan arányos. Azonos előjel taszít, ellentétes vonz.</li>
+<li>Relatív permittivitás εᵣ: levegő ≈ 1, paraffin ≈ 2, üveg 5–16, víz 81, bárium-titanát ≈ 1000. Nagyobb permittivitás → több tárolt energia.</li>
+<li>Feszültség (potenciálkülönbség): <span class="f">U = W/Q</span> [V = J/C].</li>
+<li>Kondenzátor: <span class="f">C = ε₀·εᵣ·A/d</span> (felülettel egyenesen, távolsággal fordítottan arányos), <span class="f">Q = C·U</span>, <span class="f">E = U/d</span>.</li>
+<li>Sávszerkezet: vezetőnél a sávok átfednek, félvezetőnél kicsi a tiltott sáv, szigetelőnél nagy (hőgerjesztésre előbb olvad, mint vezet). Elemi félvezetők: IV. csoport (C, Si, Ge). Donor: V. csoport, akceptor: III. csoport.</li>
+</ul></details>
+
+<details><summary>Ellenállás, források, Thevenin–Norton (03. előadás)</summary><ul>
+<li>Ellenállás: <span class="f">R = U/I</span> [Ω = V/A] (Ohm-törvény), reciproka a vezetőképesség (G).</li>
+<li>Eredő ellenállás: soros <span class="f">R = R₁ + R₂</span>, párhuzamos <span class="f">R = R₁R₂/(R₁+R₂)</span> (kisebb a legkisebb tagnál).</li>
+<li>Vezető ellenállása: <span class="f">R = ρ·l/A</span>. Réz fajlagos ellenállása ≈ 17,2·10⁻⁹ Ω·m. Hőfüggés: <span class="f">ρ_T = ρ₀(1 + α·ΔT)</span>, fémeknél a hőmérséklettel nő.</li>
+<li>Ellenállástípusok: állandó (réteg, tömör, huzal), változtatható (potenciométer, trimmer), változó (fotoellenállás, varisztor, termisztor, nyúlásmérő bélyeg). NTC: melegítésre az ellenállása csökken, PTC: nő.</li>
+<li>Áramforrások: kémiai (elem, akkumulátor), mozgási (generátor), fény (napelem). Szárazelem: kb. 1,5 V, nem tölthető (irreverzibilis). Akkumulátor: reverzibilis. Cellafeszültség: Pb 2 V, NiMH 1,2 V, Li-ion 3,7 V.</li>
+<li>Hatásfok: <span class="f">η = P_hasznos/P_befektetett</span>, mechanikai teljesítmény <span class="f">P = M·ω</span>. A gyakorlatban mindig 100% alatt.</li>
+<li>Ideális feszültségforrás: nincs belső ellenállása, a kapocsfeszültség terheléstől független. Ideális áramforrás: a terhelő áram a kapocsfeszültségtől független.</li>
+<li>Valós feszültségforrás: ideális forrás + soros R<sub>b</sub>. Terheléskor <span class="f">U_k = U_ü·R_t/(R_t+R_b)</span> &lt; U_ü. Rövidzárási áram: <span class="f">I_RZ = U_ü/R_b</span>. Minél kisebb a terhelő ellenállás, annál nagyobb a feszültségesés.</li>
+<li>Thevenin-kép (feszültséggenerátor + soros R<sub>b</sub>): nagy teljesítményű rendszerekben, ha a terhelés ellenállása sokkal nagyobb R<sub>b</sub>-nél. Norton-kép (áramgenerátor + párhuzamos R<sub>b</sub>): ha a terhelés ellenállása sokkal kisebb R<sub>b</sub>-nél (pl. tranzisztorok).</li>
+</ul></details>
+
+<details><summary>Mágneses tér, elektromágnes</summary><ul>
+<li>Térerősség egyenes vezető körül: <span class="f">H = I/(2rπ)</span> [A/m]. Indukció: <span class="f">B = μ₀μᵣH</span> [T = Vs/m²], <span class="f">μ₀ = 4π·10⁻⁷ Vs/Am</span>.</li>
+<li>Permeabilitás: a közeg „mágneses áteresztő képessége”. Ferromágneses (Co, Ni, Fe): μᵣ ≫ 1. Paramágneses (Pt, Al, Mn): kicsit 1 felett. Diamágneses (Au, Ag, Cu, víz, szupravezetők): 1 alatt.</li>
+<li>Gerjesztés: <span class="f">Θ = N·I</span>. Szolenoid: <span class="f">H = N·I/l</span>. Az erősség függ az áramtól, a menetszámtól, a mag μᵣ-jétől és méretétől.</li>
+<li>Mágneses fluxus: <span class="f">Φ = B·A</span> [Wb = Vs], a felülettel arányos. Tekercsfluxus: <span class="f">Ψ = N·Φ</span>, arányos a tekercs áramával.</li>
+<li>Indukált feszültség: <span class="f">U_i = ΔΨ/Δt = L·ΔI/Δt</span>. Induktivitás: <span class="f">L = N²μ₀μᵣA/l = Ψ/I</span>. A toroid szórt tere közel minimális.</li>
+<li>Lorentz-erő: <span class="f">F = B·I·l</span>. Maximális, ha az indukcióvonalak merőlegesek a vezetőre, nulla, ha párhuzamosak. Azonos irányú áramok vonzzák, ellentétesek taszítják egymást.</li>
+<li>Lenz-törvény: az indukált feszültség iránya mindig az őt létrehozó változást gyengíteni igyekszik.</li>
+<li>Tárolt energia: tekercs <span class="f">W_L = ½·L·I²</span> (az áramtól négyzetesen függ), kondenzátor <span class="f">W_C = ½·C·U²</span>. Mértékegység: J.</li>
+</ul></details>
+
+<details><summary>Áramütés élettani hatásai</summary><ul>
+<li>A veszélyességet elsősorban az átfolyó áram erőssége szabja meg. DC: 2–6 mA érzetküszöb, 8–10 mA rángás, 60–70 mA elengedhetetlen izomgörcs, 300–500 mA szívbénulás.</li>
+<li>Függ még: behatás ideje, testimpedancia és az áram útja (szív), bőrellenállás, érintési feszültség, áram jellege és frekvenciája (AC), szív-áram faktor. AC-zónák: AC-1 … AC-4 (AC-4.3: fibrilláció valószínűsége &gt; 50%).</li>
+</ul></details>
+
+<details><summary>Hálózatok: Thevenin, Norton, Kirchhoff, osztók</summary><ul>
+<li>Thevenin: bármely generátorokból és ellenállásokból álló kapcsolás helyettesíthető feszültséggenerátorral és vele <b>sorosan</b> kapcsolt R<sub>b</sub>-vel. Norton: áramgenerátorral és vele <b>párhuzamosan</b> kapcsolt R<sub>b</sub>-vel.</li>
+<li>Átalakítás: <span class="f">I₀ = U₀/R_b</span>, <span class="f">U₀ = I₀·R_b</span>. R<sub>b</sub>, az üresjárási feszültség és a rövidzárási áram azonos. Ideális feszültségforrás kapocsfeszültsége = forrásfeszültség.</li>
+<li>Kirchhoff I. (csomóponti): a befolyó áramok összege = a kifolyók összege, <span class="f">ΣI = 0</span>. Kirchhoff II. (hurok): a hurokban a részfeszültségek összege nulla, <span class="f">ΣU = 0</span>.</li>
+<li>Feszültségosztó (soros): <span class="f">U₁ = U·R₁/(R₁+R₂)</span>, az áram közös. Potenciométer = állítható feszültségosztó. Áramosztó (párhuzamos): <span class="f">I₁ = I·R₂/(R₁+R₂)</span>, az áram fordított arányban osztódik.</li>
+<li>Csomóponti potenciálok módszere: az ismeretlen csomópontokra Kirchhoff I.-et írunk, így minden U és I kiszámítható.</li>
+</ul></details>
+
+<details><summary>Szinuszos jelek, impedancia, rezonancia</summary><ul>
+<li><span class="f">f = 1/T</span>, <span class="f">ω = 2πf = 2π/T</span>, <span class="f">u(t) = U_max·sin(ωt + φ)</span>. A periódusidő két nem szomszédos nullátmenet (vagy két szomszédos csúcs) között telik el. Szinuszos jelnek nincs felharmonikusa.</li>
+<li>Effektív érték: <span class="f">U_eff = U_max/√2 ≈ 0,71·U_max</span>. Pl. 325,2 V csúcsérték → 230 V.</li>
+<li>Impedancia: ellenállás <span class="f">R</span>, kondenzátor <span class="f">1/(jωC)</span>, tekercs <span class="f">jωL</span>. A fázistolás (Δφ) időbeli eltolást jelent.</li>
+<li>Soros RLC rezonancia: <span class="f">ω₀L = 1/(ω₀C)</span> → Thomson-képlet <span class="f">f₀ = 1/(2π√(LC))</span>.</li>
+<li>Háromfázisú rendszer: a vonali feszültség két fázisvezeték között mérhető. AC-nél P = hatásos, Q = meddő, S = látszólagos teljesítmény.</li>
+</ul></details>
+
+<details><summary>Tranziens viselkedés</summary><ul>
+<li>Az ideális négyszögjel végtelen sok harmonikust tartalmaz (Fourier-sor), a valóságban csak közelíthető. Felfutási idő: 10% → 90% között, lefutási idő: 90% → 10% között.</li>
+<li>Kondenzátor: <span class="f">i_C = C·Δu/Δt</span>. DC-n szakadás, gyors változásnál rövidzár. Tekercs: <span class="f">u = L·Δi/Δt</span>. DC-n rövidzár, hirtelen változásnál szakadás.</li>
+<li>Időállandó: RC tagnál <span class="f">τ = R·C</span> [s], RL tagnál <span class="f">τ = L/R</span>. Mindkettő lineárisan függ a két elemtől.</li>
+<li>Töltődés: 1τ → 63,2%, 2τ → 86,5%, 3τ → 95%, 4τ → 98,2%, 5τ → 99,3%. Kisülés: 36,8%, 13,5%, 5%, 1,8%, 0,7%.</li>
+<li>RC aluláteresztő szűrő: a vágási frekvencián (−3 dB) a feszültség 1/√2 ≈ 70%-ra, a teljesítmény 50%-ra esik.</li>
+<li>Decibel: <span class="f">X dB = 10·log₁₀(P₂/P₁)</span>, feszültségre <span class="f">20·log₁₀(U₂/U₁)</span>. +3 dB ≈ kétszeres teljesítmény.</li>
+<li>Vezetékek: minden átviteli közeg aluláteresztő szűrőként közelíthető (L′, C′ elemekkel), nincs végtelen sávszélesség. Nagy frekvencián a skin-hatás is korlátoz. UTP kategóriák: Cat 5e 100 MHz, Cat 6 250 MHz, Cat 6A 500 MHz, Cat 8 2 GHz.</li>
+</ul></details>
+
+<details><summary>Aktív alkatrészek: félvezetők és diódák</summary><ul>
+<li>Sávszerkezet: fémnél a vegyérték- és vezetési sáv átfed, félvezetőnél keskeny tiltott sáv van, szigetelőnél széles. Félvezetőben az elektronok és a lyukak vezetnek.</li>
+<li>Si és Ge: 4 vegyértékű (IV. főcsoport), kovalens kötés, egykristályos szerkezet. n-típus: 5 vegyértékű donor (As, Sb), túlsúlyban szabad elektron. p-típus: 3 vegyértékű akceptor (Al, In, Ga), a töltéshordozó a lyuk.</li>
+<li>p-n átmenet: kiürített réteg és potenciálgát. Nyitóirány: a nyitófeszültség eléri a diffúziós potenciált, a gát megszűnik. Záróirány: a gát nő, a kiürített réteg szélesebb.</li>
+<li>Dióda árama: <span class="f">I = I₀(e^(U/U_T) − 1)</span>, <span class="f">U_T = kT/q ≈ 25 mV</span>. Nyitófeszültség: Si 0,7 V, Ge 0,2 V, Schottky 0,2–0,4 V. Dinamikus ellenállás: <span class="f">r_d = U_T/I</span>.</li>
+</ul>
+<table><tr><th>Dióda</th><th>Lényeg</th></tr>
+<tr><td>Schottky</td><td>fém–félvezető átmenet, gyors, kis kapacitású, alacsony nyitófeszültség</td></tr>
+<tr><td>Zener</td><td>záróirányban szabályozott letörés, feszültségstabilizálás, referencia</td></tr>
+<tr><td>Szupresszor</td><td>túlfeszültség-védelem, impulzust jól tűr, tartós terhelést nem</td></tr>
+<tr><td>Varikap</td><td>záró feszültséggel állítható kapacitás (nagyobb zárófeszültség → kisebb C)</td></tr>
+<tr><td>Alagútdióda</td><td>nyitóirányban negatív dinamikus ellenállású szakasz, erősítés, gyors kapcsolás</td></tr>
+<tr><td>LED</td><td>rekombinációkor fényt bocsát ki, záróirányú tűrése alacsony (5–6 V)</td></tr>
+<tr><td>Fotodióda</td><td>záróirányban működik, fény hatására vezetővé válik, külső feszültség nélkül fényelem</td></tr></table></details>
+
+<div class="tip"><b>Gyakori csapdák a ZH-n:</b> a szinuszos jel periódusideje két <i>nem szomszédos</i> nullátmenet között van. A lefutási idő a 90% és 10% közötti szakasz. A kondenzátor DC-n szakadás, a tekercs DC-n rövidzár. A tekercs energiája az áram négyzetével nő.</div>
+
+</section>
+
+<section class="pane" id="p2" hidden>
+<div class="bar">
+<label for="n">Kérdések száma</label>
+<select id="n"><option>10</option><option>20</option><option>30</option></select>
+<button class="p" id="go">Új teszt</button>
+<span id="score" aria-live="polite"></span></div>
+<div id="qs"></div>
+</section>
+
+<script>
+const R=(a,b)=>a+Math.floor(Math.random()*(b-a+1)),pick=a=>a[R(0,a.length-1)];
+const sh=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=R(0,i);[a[i],a[j]]=[a[j],a[i]]}return a};
+const fm=(x,u)=>String(Number(x.toPrecision(3))).replace(".",",")+" "+u;
+function N(q,ans,wr,u,ex){const o=[fm(ans,u)];for(const w of wr){const s=fm(w,u);if(!o.includes(s))o.push(s)}
+let k=2;while(o.length<4){const s=fm(ans*k,u);if(!o.includes(s))o.push(s);k+=.5}return{q,o:o.slice(0,4),ex}}
+const gens=[
+()=>{const U=pick([5,9,12,24]),a=pick([1,2,4.7,10,22]),b=pick([1,3.3,10,47]);return N(`Két soros ellenállás: R1 = ${a} kΩ, R2 = ${b} kΩ, Ube = ${U} V. Mennyi a feszültség R2-n?`,U*b/(a+b),[U*a/(a+b),U/2,U*b/a],"V","U₂ = U·R₂/(R₁+R₂)")},
+()=>{const I=pick([10,12,20,30,60]),a=pick([1,2,4,10]),b=pick([5,6,12,20]);return N(`Két párhuzamos ellenállás (R1 = ${a} kΩ, R2 = ${b} kΩ) közös ága ${I} mA. Mekkora az R1-en folyó áram?`,I*b/(a+b),[I*a/(a+b),I/2,I*b/a],"mA","I₁ = I·R₂/(R₁+R₂): a kisebb ellenállás viszi a nagyobb áramot.")},
+()=>{const m=pick([10,12,100,170,311,325.2,400]);return N(`Mekkora egy ${String(m).replace(".",",")} V csúcsértékű szinuszos feszültség effektív értéke?`,m/Math.SQRT2,[m*Math.SQRT2,m/2,m],"V","U_eff = U_max/√2")},
+()=>{const r=pick([1,2.2,4.7,10,100]),c=pick([1,10,22,100]);return N(`Egy RC tagban R = ${r} kΩ, C = ${c} µF. Mekkora az időállandó?`,r*c,[r/c,r+c,r*c*2],"ms","τ = R·C (kΩ·µF = ms)")},
+()=>{const L=pick([1,10,100]),C=pick([1,10,100]),f=1e6/(2*Math.PI*Math.sqrt(L*C));const w=2*Math.PI*f;return N(`Soros LC rezgőkör: L = ${L} mH, C = ${C} nF. Mekkora a sajátfrekvencia? (kHz)`,f/1e3*Math.sqrt(1e6/1e6)*Math.sqrt(1)*1,[w/1e3,f/2e3,2*f/1e3],"kHz","f₀ = 1/(2π√(LC)), L·C = "+L+"·10⁻³ · "+C+"·10⁻⁹")},
+()=>{const L=pick([2,5,10,50]),I=pick([0.5,1,2,3]);return N(`Egy ${L} mH-s tekercsen ${String(I).replace(".",",")} A áram folyik. Mennyi a mágneses térben tárolt energia?`,.5*L*I*I,[L*I*I,.5*L*I,L*I],"mJ","W = ½·L·I²")},
+()=>{const U=pick([5,12,24,230]),r=pick([10,47,100,220]);return N(`Egy ${r} Ω-os ellenállásra ${U} V feszültséget kapcsolunk. Mekkora a hővé alakuló teljesítmény?`,U*U/r,[U/r,U*U/(2*r),U*U*r],"W","P = U²/R")},
+()=>{const r=pick([4,50,100,1000]);return N(`Egy jel teljesítménye a ${r}-szeresére nő. Hány dB ez?`,10*Math.log10(r),[20*Math.log10(r),r,10*Math.log10(r)/2],"dB","X dB = 10·log₁₀(P₂/P₁)")},
+()=>{const Q=pick([6,12,20,45]),t=pick([2,3,4,5]);return N(`Egy vezető keresztmetszetén ${t} s alatt ${Q} C töltés halad át. Mekkora az áram?`,Q/t,[t/Q,Q*t,Q/(t*t)],"A","I = Q/t")},
+()=>{const C=pick([10,47,100,470]),U=pick([5,12,24]);return N(`Egy ${C} µF-os kondenzátor ${U} V-ra van töltve. Mennyi a tárolt energia?`,.5*C*U*U/1e3,[C*U*U/1e3,.5*C*U/1e3,.25*C*U*U/1e3],"mJ","W = ½·C·U²")},
+()=>{const T=pick([0.5,2,4,10,20]);return N(`Egy szinuszos jel periódusideje ${String(T).replace(".",",")} ms. Mekkora a frekvenciája?`,1000/T,[2*Math.PI*1000/T,T,500/T],"Hz","f = 1/T")},
+()=>{const a=R(2,9),b=R(2,9),c=R(1,6);return N(`Egy csomópontba ${a} A és ${b} A folyik be, kifolyik ${c} A az egyik ágon. Mekkora a másik kifolyó ág árama?`,a+b-c,[a+b+c,a-b+c||a+c,a+b],"A","Kirchhoff I.: befolyó = kifolyó")},
+()=>{const U=pick([5,12,24]),R=pick([100,220,470,1000]);return N(`Egy ${R} Ω-os ellenálláson ${U} V feszültség esik. Mekkora az áram?`,U/R*1000,[U*R/1000,R/U,U/R*100],"mA","Ohm: I = U/R")},
+()=>{const a=pick([1,2,3.3,4.7,10]),b=pick([2.2,5,6.8,10,22]);return N(`Két párhuzamosan kötött ellenállás: R1 = ${a} kΩ, R2 = ${b} kΩ. Mekkora az eredő?`,a*b/(a+b),[a+b,(a+b)/2,a*b],"kΩ","R = R₁R₂/(R₁+R₂), mindig kisebb a legkisebb tagnál.")},
+()=>{const l=pick([10,50,100]),A=pick([0.5,1,1.5,2.5]);return N(`Rézvezeték (ρ = 0,0172 Ω·mm²/m): hossza ${l} m, keresztmetszete ${String(A).replace(".",",")} mm². Mekkora az ellenállása?`,0.0172*l/A,[0.0172*l*A,0.0172*A/l,l/A],"Ω","R = ρ·l/A")},
+()=>{const k=pick([2,3,4]);return N(`Két pontszerű töltés távolságát ${k}-szorosára növeljük. Hányszorosára változik a közöttük ható erő?`,1/(k*k),[1/k,k*k,k],"×","Coulomb: F ~ 1/r²")},
+()=>{const Ue=pick([6,9,12]),Rb=pick([1,2,3]),Rt=pick([4,8,10,18]);return N(`Valós feszültségforrás: U_üresjárási = ${Ue} V, R_b = ${Rb} Ω. Mekkora a kapocsfeszültség ${Rt} Ω-os terhelésnél?`,Ue*Rt/(Rt+Rb),[Ue*Rb/(Rt+Rb),Ue,Ue/2],"V","U_k = U_ü·R_t/(R_t+R_b)")},
+()=>{const Ue=pick([6,9,12,24]),Rb=pick([0.5,1,2,4]);return N(`Egy valós feszültségforrás üresjárási feszültsége ${Ue} V, belső ellenállása ${String(Rb).replace(".",",")} Ω. Mekkora a rövidzárási áram?`,Ue/Rb,[Ue*Rb,Rb/Ue,Ue/(2*Rb)],"A","I_RZ = U_ü/R_b")},
+()=>{const c=pick([1,10,47,100]),U=pick([5,12,24]);return N(`Egy ${c} µF-os kondenzátor ${U} V-ra töltődött. Mennyi a töltése?`,c*U,[c/U,U/c,c*U*U],"µC","Q = C·U")}
+];
+const C=[
+["A kondenzátor kapacitása (C) hogyan függ Q-tól és U-tól?","Egyenesen Q-val, fordítottan U-val","Fordítottan mindkettőtől","Egyenesen mindkettőtől","Fordítottan Q-val, egyenesen U-val","C = Q/U"],
+["A feszültség közvetlenül számolható …","a munka és a töltés viszonyából","a munka és az ellenállás viszonyából","a töltés és az ellenállás viszonyából","a kapacitás és az induktivitás viszonyából","U = W/Q"],
+["A villamos térerősség a síkkondenzátorban …","a fegyverzetek távolságával fordítottan arányos","a távolsággal négyzetesen arányos","a feszültséggel fordítottan arányos","a fegyverzetek felületével arányos","E = U/d"],
+["Melyik számít nagy villamos rendszernek?","Internet","Villogó reklámáramkör","RFID-kulcs","LED-elemlámpa",""],
+["A tekercsfluxus nagysága a tekercs …","áramával arányos","áramától független","áramával négyzetesen arányos","áramával fordítottan arányos","Ψ = L·I"],
+["A mágneses fluxus értéke …","a felület növekedésével arányos","a felület méretével arányosan csökken","az indukció növekedésével csökken","az indukciótól független","Φ = B·A"],
+["A tekercs mágneses terében tárolt energia a tekercs áramától …","négyzetesen függ","lineárisan függ","reciprokosan függ","független","W = ½·L·I²"],
+["Az áramjárta vezetőnek …","mágneses tere van","elektromos tere van","nincs se elektromos, se mágneses tere","csak a kondenzátornak van tere","H = I/(2rπ)"],
+["Az akkumulátorba töltött energia …","csak részben nyerhető vissza","teljes egészében visszanyerhető","többszörösen visszanyerhető","egyáltalán nem nyerhető vissza","Veszteségek vannak."],
+["Az ellenálláson hővé alakuló teljesítmény a feszültség növelésével …","négyzetesen nő","arányosan nő","négyzetesen csökken","arányosan csökken","P = U²/R"],
+["Kirchhoff I. törvénye …","a csomóponti törvény","a hurok törvény","a QCU törvény","a csomópont feszültségét határozza meg",""],
+["Egy vezető ellenállása …","a hosszától, keresztmetszetétől és anyagától is függ","a hosszától független","a keresztmetszetétől független","az anyagától független","R = ρ·l/A"],
+["Ideális feszültségforrás kapocsfeszültsége …","egyenlő a forrásfeszültséggel","terhelésfüggő","nagyobb, mint a forrásfeszültség","kisebb, mint a forrásfeszültség",""],
+["A Norton-helyettesítő kép …","áramforrást és vele párhuzamos belső ellenállást tartalmaz","feszültségforrást és vele sorosan kapcsolt ellenállást tartalmaz","feszültségforrást és vele párhuzamos ellenállást tartalmaz","áramforrást és vele sorosan kapcsolt ellenállást tartalmaz","A Thevenin-kép a soros feszültséggenerátoros."],
+["A csomóponti potenciálok módszerével az áramkör minden elemének …","árama és feszültsége is meghatározható","csak az árama határozható meg","csak a feszültsége határozható meg","csak a teljesítménye határozható meg",""],
+["Egy szinuszos jel periódusideje …","két nem szomszédos nullátmenet közötti idő","két szomszédos nullátmenet közötti idő","a pozitív és negatív csúcs közötti idő","a nullátmenet és a csúcs közötti idő","Fél periódus a két szomszédos nullátmenet."],
+["Váltakozó áramú teljesítményeknél a P jelölése …","hatásos teljesítmény","meddő teljesítmény","látszólagos teljesítmény","teljesítménytényező",""],
+["A vonali feszültség háromfázisú rendszerben …","két fázisvezető között mért feszültség","fázisvezető és nullavezető közötti feszültség","a fázistekercsen mért feszültség","a transzformátor szekunder feszültsége",""],
+["A lefutási idő a jel lefutó élén …","a 90% és 10% közötti idő","a 100% és 50% közötti idő","a 66% és 33% közötti idő","az 50% és 0% közötti idő",""],
+["Egy RC tag időállandójának mértékegysége …","s","V","T","W","τ = R·C"],
+["Egy RC tag időállandója …","az ellenállástól és a kondenzátortól is lineárisan függ","az ellenállástól lineárisan, a kondenzátortól reciprokosan","az ellenállástól reciprokosan, a kondenzátortól lineárisan","mindkettőtől reciprokosan","τ = R·C"],
+["DC gerjesztésnél a kondenzátor …","szakadásként viselkedik","rövidzárként viselkedik","ellenállásként viselkedik","tekercsként viselkedik","Állandó feszültségnél nincs áram."],
+["DC gerjesztésnél a tekercs …","rövidzárként viselkedik","szakadásként viselkedik","kondenzátorként viselkedik","hőforrásként viselkedik","Nem változik az áram, nincs indukált feszültség."],
+["Hányszor a végső értéke az RC tag kondenzátorfeszültsége 1τ után töltődéskor?","kb. 63,2%","kb. 36,8%","kb. 86,5%","kb. 99,3%",""],
+["Mi történik a vágási frekvencián (−3 dB) a feszültséggel?","1/√2-szeresére (≈70%) csökken","felére csökken","a negyedére csökken","nem változik","A teljesítmény ekkor 50%."],
+["Mit mond ki a Lenz-törvény?","Az indukált feszültség az őt létrehozó változást gyengíteni igyekszik","Az indukált feszültség erősíti a változást","A feszültség arányos az ellenállással","A csomópontban az áramok összege nulla",""],
+["Mekkora a szilícium dióda tipikus nyitófeszültsége?","kb. 0,7 V","kb. 0,2 V","kb. 5 V","kb. 12 V","Ge: 0,2 V, Schottky: 0,2–0,4 V."],
+["Melyik adalékolás ad n-típusú félvezetőt?","5 vegyértékű donor (pl. As, Sb)","3 vegyértékű akceptor (pl. Al)","4 vegyértékű adalék","adalékolás nélküli tiszta Si",""],
+["Melyik dióda dolgozik záróirányban, és fény hatására vezetővé válik?","fotodióda","LED","Schottky-dióda","alagútdióda",""],
+["Melyik dióda használatos feszültségstabilizálásra?","Zener-dióda","varikap","LED","alagútdióda","A szabályozott záróirányú letörést használja."],
+["Varikap diódánál a zárófeszültség növelésekor a kapacitás …","csökken","nő","nem változik","először nő, aztán csökken","A kiürített réteg szélesebb."],
+["Mi a permeabilitás gyakorlati jelentése?","a közeg mágneses áteresztő képessége","a közeg elektromos vezetőképessége","a közeg hővezetése","a közeg dielektromos állandója","B = μ·H"],
+["Mekkora az elektron töltésének abszolút értéke?","kb. 1,6·10⁻¹⁹ C","kb. 1,6·10⁻⁹ C","kb. 9,1·10⁻³¹ C","kb. 8,85·10⁻¹² C","Az elemi töltés. A 8,85·10⁻¹² a vákuum permittivitása."],
+["Két töltés távolsága kétszeres lesz. A köztük ható Coulomb-erő …","negyedére csökken","felére csökken","kétszeresére nő","nem változik","F ~ 1/r²"],
+["Soros kapcsolásnál az eredő ellenállás …","az ellenállások összege","kisebb, mint a legkisebb tag","a reciprokok összege","az ellenállások szorzata",""],
+["Párhuzamos kapcsolásnál az eredő ellenállás …","kisebb, mint a legkisebb tag","az ellenállások összege","nagyobb, mint a legnagyobb tag","az ellenállások átlaga",""],
+["Hogyan változik a réz fajlagos ellenállása a hőmérséklet növelésével?","nő","csökken","nem változik","nullára csökken","ρ_T = ρ₀(1 + α·ΔT)"],
+["Az NTC termisztor ellenállása a hőmérséklet növekedésével …","csökken","nő","nem változik","először nő, aztán csökken","PTC: nő."],
+["Melyik állítás igaz a szárazelemre?","nem tölthető, a vegyi folyamatok nem reverzibilisek","újratölthető","névleges feszültsége 3,7 V","mozgási elven működik","Akkumulátornál a folyamatok reverzibilisek."],
+["Valós feszültségforrás terhelésekor a kapocsfeszültség az üresjárási feszültséghez képest …","kisebb","nagyobb","ugyanakkora","nulla","A belső ellenálláson feszültség esik."],
+["Mikor célszerű a Norton-helyettesítő képet használni?","ha a terhelő ellenállás sokkal kisebb a belső ellenállásnál","ha a terhelő ellenállás sokkal nagyobb a belső ellenállásnál","csak váltakozó áramnál","csak ideális forrásnál","A Thevenin-kép a nagy terhelő ellenállású esetre való."],
+["Az ideális áramforrás terhelő árama …","független a kapocsfeszültségtől","arányos a kapocsfeszültséggel","a belső ellenállástól függ","nulla",""],
+["A síkkondenzátor fegyverzetei közti távolságot növelve a kapacitás …","csökken","nő","nem változik","négyzetesen nő","C = ε₀εᵣA/d"],
+["Melyik anyag relatív permittivitása a legnagyobb?","víz (≈81)","levegő (≈1)","paraffin (≈2)","petróleum (≈2,1)",""],
+["Milyen a tárgy zárthelyije?","60 perces teszt, Go/NoGo, nem számít az év végi jegybe","90 perces írásbeli, számít a jegybe","szóbeli, 20 perces","házi feladat",""],
+["1 coulomb megegyezik …","1 A·s-mal","1 V/s-mal","1 A/s-mal","1 W·s-mal","1 C = 1 A·s"]
+];
+let done,ok,tot;
+function build(){const n=+document.getElementById("n").value,half=Math.ceil(n/2);
+const g=[];for(let i=0;i<n-half;i++)g.push(gens[R(0,gens.length-1)]());
+const cs=sh(C).slice(0,half).map(c=>({q:c[0],o:c.slice(1,5),ex:c[5]}));
+const all=sh([...g,...cs]);const box=document.getElementById("qs");box.innerHTML="";ok=0;done=0;tot=all.length;sc();
+all.forEach((x,i)=>{const d=document.createElement("div");d.className="q";const p=document.createElement("p");p.textContent=(i+1)+". "+x.q;d.append(p);
+sh(x.o.map((t,k)=>({t,c:k==0}))).forEach(op=>{const b=document.createElement("button");b.className="o";b.textContent=op.t;b.onclick=()=>{
+d.querySelectorAll(".o").forEach((e,k)=>{e.disabled=true});b.classList.add(op.c?"ok":"no");if(!op.c){[...d.querySelectorAll(".o")].find(e=>e.dataset.c).classList.add("ok")}
+done++;if(op.c)ok++;if(x.ex){const e=document.createElement("div");e.className="ex";e.textContent=x.ex;d.append(e)}sc()};if(op.c)b.dataset.c=1;d.append(b)});box.append(d)})}
+function sc(){document.getElementById("score").textContent=done<tot?`${ok} / ${done} jó (${tot} kérdés)`:`Végeredmény: ${ok} / ${tot}`}
+document.getElementById("go").onclick=build;document.getElementById("n").onchange=build;
+const tabs=[["t1","p1"],["t2","p2"]];
+tabs.forEach(([t,p])=>document.getElementById(t).onclick=()=>{tabs.forEach(([a,b])=>{document.getElementById(a).setAttribute("aria-selected",a==t);document.getElementById(b).hidden=b!=p})});
+build();
+</script></main></body></html>
